@@ -8,7 +8,7 @@ resource "github_repository" "repository" {
   visibility             = "public"
   auto_init              = true
   delete_branch_on_merge = true
-  topics                 = ["client", "node", "aws", "s3", "angular"]
+  topics                 = var.github_repository_topics
 }
 
 resource "github_branch_default" "main" {
